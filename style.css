@@ -377,11 +377,36 @@ body {
     font-size: clamp(17px, 2vw, 21px);
 }
 
+.school-name {
+    margin-bottom: 8px;
+}
+
+.school-level {
+    margin: 0;
+    font-size: clamp(15px, 1.5vw, 18px);
+    font-weight: 800;
+    color: #f4f4f4;
+}
+
 .project-item p {
     margin: 0;
     color: #d5d8dd;
     line-height: 1.5;
     font-size: clamp(14px, 1.4vw, 16px);
+}
+
+.editable-school {
+    border: 1px dashed #6f7783;
+    border-radius: 8px;
+    padding: 8px 10px;
+    min-height: 38px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.editable-school:focus {
+    outline: 2px solid #efefef;
+    border-color: #efefef;
+    background: rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 1100px) {
