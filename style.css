@@ -109,56 +109,6 @@ body {
     border-color: #efefef;
 }
 
-.menu-btn {
-    border: 0;
-    background: transparent;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 7px;
-    cursor: pointer;
-    padding: 6px;
-}
-
-.menu-btn span {
-    display: block;
-    width: 30px;
-    height: 2px;
-    background: #efefef;
-}
-
-.menu-panel {
-    position: absolute;
-    top: calc(var(--nav-height) - 8px);
-    right: clamp(10px, 2vw, 36px);
-    min-width: min(190px, calc(100vw - 28px));
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 10px;
-    border: 1px solid #4e5560;
-    border-radius: 10px;
-    background: #1e2126;
-    z-index: 80;
-}
-
-.menu-panel[hidden] {
-    display: none;
-}
-
-.menu-panel a {
-    color: #f1f1f1;
-    text-decoration: none;
-    font-size: 15px;
-    padding: 10px 12px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.menu-panel a:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
 
 .hero {
     min-height: calc(100vh - var(--nav-height));
@@ -440,11 +390,6 @@ body {
         gap: 12px;
     }
 
-    .menu-panel {
-        top: calc(100% + 6px);
-        right: 12px;
-    }
-
     .social-links {
         margin-left: auto;
     }
@@ -476,10 +421,6 @@ body {
         padding: 10px 12px;
     }
 
-    .menu-btn span {
-        width: 26px;
-    }
-
     .social-links a {
         width: 30px;
         height: 30px;
@@ -498,4 +439,124 @@ body {
     .contact-page {
         padding: 14px;
     }
+}
+
+/* Light theme override: white backgrounds, black text, black borders */
+:root {
+    --bg-main: #ffffff;
+    --bg-nav: #ffffff;
+    --text: #000000;
+    --muted: #222222;
+    --button-text: #000000;
+}
+
+body,
+.top-nav,
+.hero-content,
+.about-page,
+.contact-page,
+.about-card,
+.projects-card,
+.project-item,
+.contact-page-card,
+.hire-form-card {
+    background: #ffffff !important;
+    color: #000000;
+}
+
+.main-nav a,
+.social-links a,
+.page-count,
+.about-card p,
+.project-item p,
+.school-level,
+.contact-page-card p,
+.contact-page-card a {
+    color: #000000 !important;
+}
+
+.main-nav .nav-btn,
+.main-nav .nav-btn.is-active,
+.social-links a,
+.about-card,
+.projects-card,
+.project-item,
+.contact-page-card,
+.hire-form-card,
+.hire-form input,
+.hire-form textarea,
+.hire-form button,
+.editable-school {
+    border-color: #000000 !important;
+}
+
+.main-nav .nav-btn,
+.main-nav .nav-btn.is-active,
+.social-links a:hover,
+.main-nav .nav-btn:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Force all portfolio text to black */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+label,
+a,
+strong,
+small,
+button,
+input,
+textarea {
+    color: #000000 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #000000 !important;
+    opacity: 1;
+}
+
+/* Make nav items look like clear, clickable buttons */
+.main-nav .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+    padding: 10px 16px;
+    border: 2px solid #000000 !important;
+    border-radius: 12px;
+    background: #f5f5f5 !important;
+    color: #000000 !important;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.main-nav .nav-btn:hover {
+    background: #e8e8e8 !important;
+    transform: translateY(-1px);
+}
+
+.main-nav .nav-btn:active {
+    transform: translateY(2px);
+}
+
+.main-nav .nav-btn.is-active {
+    background: #dcdcdc !important;
+    box-shadow: none;
+}
+
+.main-nav .nav-btn:focus-visible {
+    outline: 3px solid #000000;
+    outline-offset: 2px;
 }
