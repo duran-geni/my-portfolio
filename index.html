@@ -14,10 +14,10 @@
     <div class="page-shell">
         <header class="top-nav">
             <nav class="main-nav" id="main-nav">
-                <a href="index.html" class="nav-btn is-active" aria-current="page">Home</a>
-                <a href="about.html" class="nav-btn">About</a>
-                <a href="projects.html" class="nav-btn">Projects</a>
-                <a href="contact.html" class="nav-btn">Contact</a>
+                <a href="#home" class="nav-btn is-active" aria-current="page">Home</a>
+                <a href="#about" class="nav-btn">About</a>
+                <a href="#projects" class="nav-btn">Projects</a>
+                <a href="#contact" class="nav-btn">Contact</a>
             </nav>
             <div class="social-links" aria-label="Social links">
                 <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -35,17 +35,88 @@
             </div>
         </header>
 
-        <main class="hero">
+        <main class="hero" id="home">
             <section class="hero-photo" id="photos" aria-label="Portfolio photo"></section>
-            <section class="hero-content" id="about">
+            <section class="hero-content">
                 <h1>Hello,<br>Welcome!</h1>
                 <div class="page-count">Page | 01</div>
             </section>
         </main>
+
+        <section class="about-page scroll-section" id="about">
+            <div class="about-card">
+                <h1>About Me</h1>
+                <p>
+                    I am Genivieve Duran, an IT student and aspiring web developer.
+                    I enjoy creating clean and user-friendly websites while continuously learning modern tools.
+                </p>
+                <ul class="about-list">
+                    <li><strong>Role:</strong> IT Student / Web Developer</li>
+                    <li><strong>Focus:</strong> Frontend Design, Responsive Layouts</li>
+                    <li><strong>Tech Stack:</strong> HTML, CSS, JavaScript</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="about-page scroll-section" id="projects">
+            <div class="projects-card">
+                <h2>Projects I Made</h2>
+                <div class="project-grid">
+                    <article class="project-item">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>Designed and built a portfolio with a modern hero layout and responsive navigation.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Contact Information Page</h3>
+                        <p>Implemented a dedicated contact page with clear details and clean styling.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Responsive Navigation Menu</h3>
+                        <p>Created a mobile-friendly hamburger menu with custom dropdown actions.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="projects-card">
+                <h2>Technologies I Use</h2>
+                <div class="project-grid">
+                    <article class="project-item">
+                        <h3>Website Development</h3>
+                        <p>HTML5, CSS3, JavaScript, Responsive Web Design, Git, GitHub.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Mobile App Development</h3>
+                        <p>Flutter, Dart, Firebase, REST API integration, Android Studio.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Tools and Workflow</h3>
+                        <p>VS Code, Figma basics, UI prototyping, debugging, and testing fundamentals.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-page scroll-section" id="contact">
+            <div class="contact-page-card">
+                <h1>Contact Me</h1>
+                <p><strong>Gmail:</strong> <a href="mailto:genni@example.com">genni@example.com</a></p>
+                <p><strong>Cellphone:</strong> +63 912 345 6789</p>
+            </div>
+            <div class="hire-form-card">
+                <form class="hire-form" id="hire-form">
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" rows="7" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <p class="hire-form-note" id="hire-form-note" hidden>Thank you. Your hiring message has been sent.</p>
+            </div>
+        </section>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
 

@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Manrope", sans-serif;
@@ -31,9 +35,16 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 14px clamp(14px, 4vw, 48px);
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 90;
     gap: 12px;
     flex-wrap: wrap;
+}
+
+.scroll-section,
+.hero {
+    scroll-margin-top: var(--nav-height);
 }
 
 .brand {

@@ -2,6 +2,8 @@
 const menuPanel = document.getElementById("menu-panel");
 const hireForm = document.getElementById("hire-form");
 const hireFormNote = document.getElementById("hire-form-note");
+const navLinks = document.querySelectorAll(".main-nav .nav-btn[href^='#']");
+const pageSections = document.querySelectorAll("#home, #about, #projects, #contact");
 
 menuButton?.addEventListener("click", (event) => {
     event.stopPropagation();
@@ -25,6 +27,35 @@ hireForm?.addEventListener("submit", (event) => {
     hireFormNote?.removeAttribute("hidden");
     hireForm.reset();
 });
+
+const setActiveNavLink = (sectionId) => {
+    navLinks.forEach((link) => {
+        const isActive = link.getAttribute("href") === `#${sectionId}`;
+        link.classList.toggle("is-active", isActive);
+        if (isActive) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+};
+
+if (pageSections.length && navLinks.length) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+        const visibleSection = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleSection?.target.id) {
+            setActiveNavLink(visibleSection.target.id);
+        }
+    }, {
+        rootMargin: "-35% 0px -45% 0px",
+        threshold: [0.15, 0.35, 0.6]
+    });
+
+    pageSections.forEach((section) => sectionObserver.observe(section));
+}
 
 const editableSchoolFields = document.querySelectorAll(".editable-school[data-edit-key]");
 
