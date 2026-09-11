@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Genivieve Duran | Portfolio</title>
     <!-- Link the CSS style sheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +11,7 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="logo">MyPortfolio</div>
+        <div class="logo">GD Portfolio</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -22,23 +22,36 @@
 
     <!-- Home / Hero Section -->
     <section id="home" class="hero-section">
-        <h1>Hi, I'm <span class="highlight">Genivieve G. Duran</span></h1>
-        <p>I am a passionate web developer creating clean and modern web experiences.</p>
+        <div class="hero-container">
+            <!-- Profile Image Element -->
+            <img src="c:\Users\genivieve.duran\Downloads\ChatGPT Image Sep 11, 2026, 10_03_34 AM.png" alt="Genivieve Duran" class="profile-img">
+            
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Genivieve Duran</span></h1>
+                <p>BS Information Technology Student | Aspiring Web Developer & IT Intern</p>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="about-container">
             <h2>About Me</h2>
-            <p>Hello! I am a tech enthusiast with a strong passion for building creative solutions. I enjoy bridges the gap between hardware and software, developing clean user interfaces for websites while tinkering with smart engineering and Internet of Things (IoT) platforms.</p>
-            <p>I constantly seek to improve my coding skills, experiment with new technologies, and build impactful applications that solve real-world problems.</p>
-            
+            <p>I am a dedicated BS Information Technology student at <strong>Cebu Technological University – Ginatilan Extension Campus</strong>. I am actively looking for an On-the-Job Training (OJT) or internship opportunity where I can apply my skills, learn from real work experience, and deliver simple, effective solutions.</p>
+            <p>I am hardworking, dependable, and enjoy bridging the gap between hardware and software—whether that means coding clean interfaces or tinkering with smart engineering setups.</p>
+
+            <!-- Comprehensive Technical Skills Tags -->
             <div class="skills-container">
-                <h3>My Skills</h3>
+                <h3>Technical Skills</h3>
                 <div class="skills-tags">
-                    <span>JavaScript</span>
+                    <span>Python</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Django</span>
                     <span>Arduino IDE</span>
-                    <span>Firebase</span>
+                    <span>IoT Circuits</span>
+                    <span>Basic Troubleshooting</span>
+                    <span>Technical Documentation</span>
                 </div>
             </div>
         </div>
@@ -46,33 +59,46 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
-        <h2>My Work</h2>
+        <h2>Projects & Experience</h2>
         <div class="projects-grid">
             
-            <!-- Project One Card -->
+            <!-- Project: Natecks Application -->
             <div class="project-card">
-                <h3>Project One</h3>
-                <p>A brief description of your awesome project and what tools you used.</p>
-            </div>
-            
-            <!-- Project Two Card: IoT Smart Fan Indicator -->
-            <div class="project-card">
-                <h3>IoT Smart Fan Indicator</h3>
-                <p>An Internet of Things (IoT) system built using <strong>Arduino IDE</strong> and integrated with <strong>Firebase Realtime Database</strong>. The application allows users to manually adjust temperature thresholds to activate specific status alerts. The system triggers three LED lights to dynamically indicate the real-time temperature state:</p>
-                <ul class="project-features">
-                    <li><span class="status-dot red"></span> <strong>Red LED:</strong> Indicates High Temperature</li>
-                    <li><span class="status-dot yellow"></span> <strong>Yellow LED:</strong> Indicates Medium Temperature</li>
-                    <li><span class="status-dot green"></span> <strong>Green LED:</strong> Indicates Normal Temperature</li>
-                </ul>
+                <h3>Natecks Application</h3>
+                <span class="project-category">Team Project – Web Development</span>
+                <p>Worked with a development team to continue building and improving features for the Natecks application. Handled back-end components and designed clean user interfaces. Gained practical experience in teamwork and structured project planning.</p>
+                <div class="project-tech-used">
+                    <strong>Built with:</strong> Python, Django, HTML, CSS
+                </div>
             </div>
 
+            <!-- Project: IoT Smart Fan Indicator -->
+            <div class="project-card">
+                <h3>Smart Fan Indicator</h3>
+                <span class="project-category">School Project – Internet of Things (IoT) Course</span>
+                <p>Built a smart fan indicator system for an IoT class project. Used three physical LEDs to dynamically display varying temperature thresholds, manually testing each state to verify live sensor accuracy. Learned hardware wiring patterns and simple device integration.</p>
+                <ul class="project-features">
+                    <li><span class="status-dot red"></span> <strong>Red LED:</strong> High Temperature</li>
+                    <li><span class="status-dot yellow"></span> <strong>Yellow LED:</strong> Medium Temperature</li>
+                    <li><span class="status-dot green"></span> <strong>Green LED:</strong> Normal Temperature</li>
+                </ul>
+                <div class="project-tech-used">
+                    <strong>Built with:</strong> Arduino IDE, Circuit Assembly, Hardware Integration
+                </div>
+            </div>
+            
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <h2>Get In Touch</h2>
-        <p>Email me at: <a href="mailto:gduran@gmail.com">gduran@gmail.com</a></p>
+        <p>I am open to internships, OJT opportunities, and professional collaborations. Let's connect!</p>
+        <div class="contact-details">
+            <p>📧 Email: <a href="mailto:genivieveduran@gmail.com">genivieveduran@gmail.com</a></p>
+            <p>📱 Phone: <a href="tel:09553601396">09553601396</a></p>
+            <p>📍 Location: Santander, Cebu, Philippines</p>
+        </div>
     </section>
 
     <!-- Link the JavaScript file at the bottom -->
