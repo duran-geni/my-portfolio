@@ -6,6 +6,12 @@
     <title>Genivieve Duran | Portfolio</title>
     <!-- Link the CSS style sheet -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Smooth scrolling behavior when clicking links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,10 +19,10 @@
     <nav class="navbar">
         <div class="logo">GD Portfolio</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
@@ -24,7 +30,7 @@
     <section id="home" class="hero-section">
         <div class="hero-container">
             <!-- Profile Image Element -->
-            <img src="c:\Users\genivieve.duran\Downloads\ChatGPT Image Sep 11, 2026, 10_03_34 AM.png" alt="Genivieve Duran" class="profile-img">
+            <img src="c:\Users\Acer\Downloads\ChatGPT Image Sep 12, 2026, 06_28_18 PM.png" alt="Genivieve Duran" class="profile-img">
             
             <div class="hero-text">
                 <h1>Hi, I'm <span class="highlight">Genivieve Duran</span></h1>
@@ -38,7 +44,6 @@
         <div class="about-container">
             <h2>About Me</h2>
             <p>I am a dedicated BS Information Technology student at <strong>Cebu Technological University – Ginatilan Extension Campus</strong>. I am actively looking for an On-the-Job Training (OJT) or internship opportunity where I can apply my skills, learn from real work experience, and deliver simple, effective solutions.</p>
-            <p>I am hardworking, dependable, and enjoy bridging the gap between hardware and software—whether that means coding clean interfaces or tinkering with smart engineering setups.</p>
 
             <!-- Comprehensive Technical Skills Tags -->
             <div class="skills-container">
@@ -95,13 +100,50 @@
         <h2>Get In Touch</h2>
         <p>I am open to internships, OJT opportunities, and professional collaborations. Let's connect!</p>
         <div class="contact-details">
-            <p>📧 Email: <a href="mailto:genivieveduran@gmail.com">genivieveduran@gmail.com</a></p>
-            <p>📱 Phone: <a href="tel:09553601396">09553601396</a></p>
-            <p>📍 Location: Santander, Cebu, Philippines</p>
+            <!-- INAYOS NA GMAIL LINK: Diretsong magbubukas sa browser Gmail Compose window na may To at Subject line -->
+            <p>
+                <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    📧 Email: <strong>genivieveduran@gmail.com</strong>
+                </a>
+            </p>
+            <!-- Clicking this will prompt to call your number on mobile devices -->
+            <p>
+                <a href="tel:09553601396" class="contact-link">
+                    📱 Phone: <strong>09553601396</strong>
+                </a>
+            </p>
+            <!-- Location (Plain text since it doesn't need to link anywhere) -->
+            <p class="location-text">📍 Location: Santander, Cebu, Philippines</p>
         </div>
     </section>
 
-    <!-- Link the JavaScript file at the bottom -->
-    <script src="script.js"></script>
+    <!-- JavaScript Scroll Tracker Observer -->
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        const options = {
+            root: null,
+            rootMargin: '-30% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.getAttribute('id');
+                    
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${activeId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, options);
+
+        sections.forEach(section => observer.observe(section));
+    </script>
 </body>
 </html>

@@ -54,10 +54,15 @@ body {
     border-bottom: 2px solid transparent;
 }
 
+/* Hover style for navigation links */
+.nav-links a:hover {
+    color: #764ba2;
+}
+
 /* Dynamic highlight applied by JavaScript on scroll */
 .nav-links a.active {
-    color: #667eea;
-    border-bottom: 2px solid #667eea;
+    color: #764ba2; /* Matches the vibrant purple theme in your hero banner */
+    border-bottom: 2px solid #764ba2;
 }
 
 /* Home / Hero Section */
@@ -152,11 +157,17 @@ body {
 
 .skills-tags span {
     background-color: #f0f2f5;
-    color: #667eea;
+    color: #764ba2; /* Changed theme color to match purple gradient accent */
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: bold;
     font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skills-tags span:hover {
+    background-color: #764ba2;
+    color: #fff;
 }
 
 /* Projects Section */
@@ -184,6 +195,13 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle hover lift effect for the project cards */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 .project-card h3 {
@@ -235,7 +253,7 @@ body {
 .status-dot.yellow { background-color: #ffcc00; box-shadow: 0 0 8px #ffcc00; }
 .status-dot.green { background-color: #2ecc71; box-shadow: 0 0 8px #2ecc71; }
 
-/* Contact Section */
+/* Contact Section Container Base Layout */
 .contact-section {
     padding: 100px 10%;
     text-align: center;
@@ -248,19 +266,49 @@ body {
     margin-bottom: 20px;
 }
 
+/* Custom formatting for text block link layouts */
 .contact-details p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+    color: #333;
 }
 
-.contact-section a {
-    color: #667eea;
-    font-weight: bold;
+.contact-link {
+    color: #333;
     text-decoration: none;
+    display: inline-block;
+    padding: 4px 8px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Dynamic color highlight change when user hovers */
+.contact-link:hover {
+    color: #764ba2;
+    transform: translateX(4px); /* Interactive nudge animation */
+}
+
+.contact-link strong {
+    color: #764ba2;
+    font-weight: bold;
+    border-bottom: 1px dashed #764ba2;
+    margin-left: 4px;
+    transition: border-bottom-color 0.2s ease;
+}
+
+.contact-link:hover strong {
+    border-bottom-style: solid;
+}
+
+.location-text {
+    color: #333;
+    padding: 4px 8px;
 }
 
 /* Mobile responsive layout fixes */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+    }
     .hero-container {
         flex-direction: column;
         text-align: center;
@@ -268,5 +316,8 @@ body {
     }
     .hero-text {
         text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 2.2rem;
     }
 }
